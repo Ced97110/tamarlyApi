@@ -20,6 +20,9 @@ namespace API.DTOs
         public IFormFile File { get; set; }
 
         [Required]
+        public string ImageUrl { get; set; }
+
+        [Required]
         public string Category { get; set; }
 
         [Required]
@@ -34,6 +37,7 @@ namespace API.DTOs
         [Required]
         public int FileSize { get; set; }
 
+    
         [Required]
         public string FileFormat { get; set; }
 

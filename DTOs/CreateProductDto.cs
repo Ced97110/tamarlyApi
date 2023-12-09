@@ -36,6 +36,9 @@ namespace API.DTOs
         public int FileSize { get; set; }
 
         [Required]
+        public string ImageUrl { get; set; }
+
+        [Required]
         public string FileFormat { get; set; }
 
 

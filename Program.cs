@@ -3,6 +3,7 @@ using System.Text;
 using API.Controllers;
 using API.Data;
 using API.Entity;
+using API.RequestHelpers;
 using API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpLogging;
@@ -19,7 +20,7 @@ builder.Logging.AddFilter("Microsoft.aspNetCore.httpLogging", LogLevel.Informati
 
 builder.Services.AddHttpContextAccessor();
 
-
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 // Add services to the container.
 
@@ -114,6 +115,7 @@ builder.Services.AddDbContext<StoreContext>(opt =>
 
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<ImageService>();
 
 
 var app = builder.Build();

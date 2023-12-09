@@ -20,6 +20,7 @@ namespace API.Entity
         public int FileSize { get; set; }
         public string FileFormat { get; set; }
         public DateTime PublicationDate { get; set; }
+        public string PublicId { get; set; }
 
 
     }
